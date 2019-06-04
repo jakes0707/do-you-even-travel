@@ -1,0 +1,395 @@
+.header {
+  grid-column: 1 / 1fr;
+  grid-row: 1 / 2;
+  background-image: linear-gradient(to right, rgba(131, 106, 92, 0.8), rgba(97, 57, 33, 0.8)), url(../img/travel_img.jpeg);
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+
+  &__heading {
+    grid-column: 4 / 10;
+    grid-row: 2 / 3;
+    text-align: center;
+    align-self: center;
+    font-size: 6rem;
+    font-weight: 400;
+    color: $color-white;
+
+    @media only screen and (max-width: $bp-ultra) {
+      font-size: 4rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+       grid-column: 1 / 13;
+       grid-row: 1 / 3;
+    }
+  }
+
+}
+
+//Note: with CSS grid elements does not have to be nested in order to be positioned on a grid
+
+.ion-android-map {
+  font-size: 6rem;
+  color: silver;
+  justify-self: center;
+  align-self: center;
+  grid-column: 2 / 3;
+  grid-row: 4 / 6;
+  transition: all .2s;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 5rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-column: 2 / 4;
+    grid-row: 8 / 9;
+    grid-column: 1.5rem;
+ }
+
+    &:hover {
+      transform: scale(2);
+    }
+}
+.ion-android-globe {
+  font-size: 6rem;
+  color: silver;
+  justify-self: center;
+  align-self: center;
+  grid-column: 3 / 4;
+  grid-row: 3 / 5;
+  transition: all .2s;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 5rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-column: 2 / 4;
+    grid-row: 7 / 8;
+    grid-column: 1.5rem;
+ }
+
+    &:hover {
+      transform: scale(2);
+    }
+}
+.ion-android-compass {
+  font-size: 6rem;
+  color: silver;
+  justify-self: center;
+  align-self: center;
+  grid-column: 3 / 4;
+  grid-row: 5 / 7;
+  transition: all .2s;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 5rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-column: 2 / 4;
+    grid-row: 9 / 10;
+    grid-column: 1.5rem;
+ }
+
+    &:hover {
+      transform: scale(2);
+    }
+}
+.ion-android-bus {
+  font-size: 6rem;
+  color: silver;
+  justify-self: center;
+  align-self: center;
+  grid-column: 10 / 11;
+  grid-row: 3 / 5;
+  transition: all .2s;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 5rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-column: 10 / 12;
+    grid-row: 7 / 8;
+    grid-column: 1.5rem;
+ }
+
+    &:hover {
+      transform: scale(2);
+    }
+}
+.ion-android-boat {
+  font-size: 6rem;
+  color: silver;
+  justify-self: center;
+  align-self: center;
+  grid-column: 11 / 12;
+  grid-row: 4 / 6;
+  transition: all .2s;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 5rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-column: 10 / 12;
+    grid-row: 8 / 9;
+    grid-column: 1.5rem;
+ }
+
+    &:hover {
+      transform: scale(2);
+    }
+}
+.ion-android-plane {
+  font-size: 6rem;
+  color: silver;
+  justify-self: center;
+  align-self: center;
+  grid-column: 10 / 11;
+  grid-row: 5 / 7;
+  transition: all .2s;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 5rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-column: 10 / 12;
+    grid-row: 9 / 10;
+    grid-column: 1.5rem;
+ }
+
+    &:hover {
+      transform: scale(2);
+    }
+}
+
+
+.quiz-container {
+  grid-column: 5 / 9;
+  grid-row: 3 / 7;
+  background-color: rgba($color: rgb(92, 89, 89), $alpha: .7);
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-column: 2 / 12;
+ }
+
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+
+  #quiz {
+    grid-column: 1 / 7;
+    grid-row: 1 / 7;
+
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+}
+
+.slide{
+  grid-column: 1 / 7;
+  grid-row: 1 / 7;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+
+  &__question{
+    grid-column: 1 / 7;
+    grid-row: 2 / 3;
+    text-align: center;
+    align-self: center;
+    font-size: 3.2rem;
+    color: $color-white;
+    padding-bottom: 2rem;
+    padding: 0 2rem;
+    transform: translateY(-2rem);
+
+    @media only screen and (max-width: $bp-massive) {
+      font-size: 2.5rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.7rem;
+    }
+  }
+
+  &__answers {
+    grid-column: 2 / 6;
+    grid-row: 3 / 7;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    font-size: 2.2rem;
+
+    @media only screen and (max-width: $bp-ultra) {
+      font-size: 1.6rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+
+#submit {
+  grid-column: 5 / 7;
+  grid-row: 8 / 9;
+  background-color: rgb(0, 97, 153);
+  color: $color-white;
+  font-size: 2rem;
+  cursor: pointer;
+  transform: scale(0.8);
+  transition: all .2s;
+
+  @media only screen and (max-width: $bp-large) {
+    transform: scale(0.6);
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-column: 4 / 7;
+ }
+
+  &:hover {
+    background-color: rgb(0, 150, 236);
+  }
+}
+    
+#next {
+  grid-column: 7 / 9;
+  grid-row: 7 / 8;
+  background-color: rgb(0, 97, 153);
+  color: $color-white;
+  font-size: 2rem;
+  cursor: pointer;
+  transform: scale(0.8);
+  transition: all .2s;
+
+  @media only screen and (max-width: $bp-large) {
+    transform: scale(0.6);
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-column: 7 / 10;
+ }
+
+  &:hover {
+    background-color: rgb(0, 150, 236);
+  }
+}
+
+#previous {
+  grid-column: 5 / 7;
+  grid-row: 7 / 8;
+  background-color: rgb(0, 97, 153);
+  color: $color-white;
+  font-size: 2rem;
+  cursor: pointer;
+  transform: scale(0.8);
+  transition: all .2s;
+
+  @media only screen and (max-width: $bp-large) {
+    transform: scale(0.6);
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-column: 4 / 7;
+ }
+
+  &:hover {
+    background-color: rgb(0, 150, 236);
+  }
+}
+
+#restart {
+  grid-column: 7 / 9;
+  grid-row: 8 / 9;
+  background-color: rgb(0, 97, 153);
+  color: $color-white;
+  font-size: 2rem;
+  cursor: pointer;
+  transform: scale(0.8);
+  transition: all .2s;
+
+  @media only screen and (max-width: $bp-large) {
+    transform: scale(0.6);
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-column: 7 / 10;
+ }
+
+  &:hover {
+    background-color: rgb(0, 150, 236);
+  }
+}
+
+#results {
+  grid-column: 6 / 8;
+  grid-row: 9 / 10;
+  font-size: 3rem;
+  font-weight: 400;
+  color: $color-white;
+  text-align: center;
+  align-self: center;
+  transform: translateY(-0.5rem);
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 2rem;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    grid-column: 5 / 9;
+ }
+
+}
+    
+/* CSS STYLE TEST
+  &__question {
+    grid-column: 2 / 6;
+    grid-row: 1 / 3;
+    text-align: center;
+    align-self: center;
+    font-size: 2.5rem;
+    color: $color-white;
+  }
+
+  &__answer {
+    grid-column: 2 / 6;
+    grid-row: 3 / 7;
+    text-align: center;
+    align-self: center;
+    */
+
+
+
+
+

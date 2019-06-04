@@ -1,0 +1,45 @@
+//Media Query Breakpoints
+//1em = 16px
+
+
+$bp-ultra: 103.125em;     // 1650px
+$bp-massive: 93.75em;     // 1500px
+$bp-largest: 75em;     // 1200px
+$bp-large: 68.75em;    // 1100px
+$bp-medium: 59.375em;   // 950px
+$bp-small: 40.625em;     // 650px
+$bp-smallest: 31.25em;     // 500px
+
+//Cross Browser Reset (Normalize CSS) - make each browser display the page the same way
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% -> 1 rem = 10px
+    background-color: rgb(235, 235, 235);
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 300; 
+    line-height: 1.6;
+}
+
+//Overall Grid Container
+.container {
+    display: grid;
+    grid-template-rows: 80vh 15vh;
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    grid-row-gap: 0.5rem;
+    backface-visibility: hidden;
+    overflow-x: hidden; //removes horizontal scroll
+}
